@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>hugo on Martin Liu's Blog</title><link>https://martinliu.cn/tags/hugo/</link><description>Recent content in hugo on Martin Liu's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 09 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://martinliu.cn/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>更新到 Jimmy Cai 的 Stack Hugo Theme</title><link>https://martinliu.cn/blog/change-to-jimmy-stack-theme/</link><pubDate>Sun, 09 Oct 2022 00:00:00 +0000</pubDate><guid>https://martinliu.cn/blog/change-to-jimmy-stack-theme/</guid><description>&lt;img src="https://martinliu.cn/blog/change-to-jimmy-stack-theme/2022-10-1-beijing-guomao.jpg" alt="Featured image of post 更新到 Jimmy Cai 的 Stack Hugo Theme" />&lt;p>趁着更新 Blog 皮肤的机会，也把我拖延很久的一些优化补一补。&lt;/p>
+&lt;p>最新版本的 Hugo 可以使用 Hugo modules 功能加载一个新的 Theme，我是第一次通过这种方式添加新皮肤，犯了几个错误：&lt;/p>
+&lt;ol>
+&lt;li>首先不应该用 &lt;code>git clone theme-url theme/&lt;/code> 或者其他手工下载的方式了，应该使用文档中说的 &lt;code>hugo mod get -u github.com/CaiJimmy/hugo-theme-stack/v3&lt;/code> 方法。&lt;/li>
+&lt;li>在本地测试的话，需要确保本地的 Hugo 安装的是 extended 的扩展版本，否则有些短代码用不了。用这条命令检查 &lt;code>hugo version&lt;/code> ，应该返回类似这样的信息：&lt;code>hugo v0.104.2+extended darwin/arm64 BuildDate=unknown&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>更新了 GitHub Action 的工作流，实现了如下的想法：&lt;/p>
+&lt;ul>
+&lt;li>deploy-2-page.yml : 在所有分支的 push 操作上触发构建动作，并且把更新的网站内容发布到 GitHub Pages 的部署分支中，用这个方式实现线上的网站内容预览；当新的分支在本地预览正常后，就可以 push 到远程了，push 之后就可以先在 martinliu.github.io 的域名下实现分支合并前的线上预览，如果线上预览正常的话，在进行合并分支 pr 的操作；如果线上预览有问题，则继续在本地更新，直到线上预览正常之后在合并。&lt;/li>
+&lt;li>page-deploy.yml : 当 master 分支上收到 pr 时触发这个发布操作，我将 GitHub Pages 的免费空间当做了发布前的预览的空间；而网站的内容是通过 CloudFlare 的 Pages 功能 host 的。通过这种方式，将 GitHub 的所有功能和空间作为开发服务；而 CloudFlare 定位为 DNS 和静态内的生产环境。&lt;/li>
+&lt;/ul>
+&lt;p>目前我的 blog 的工作流程是这样的：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 第一步：在本地创建新的分支，并 push 同步到远程&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">➜ martinliu.github.io git:&lt;span class="o">(&lt;/span>master&lt;span class="o">)&lt;/span> git branch build-your-best-rack
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">➜ martinliu.github.io git:&lt;span class="o">(&lt;/span>master&lt;span class="o">)&lt;/span> git checkout build-your-best-rack
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">M themes/hugo-theme-stack
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Switched to branch &lt;span class="s1">&amp;#39;build-your-best-rack&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">➜ martinliu.github.io git:&lt;span class="o">(&lt;/span>build-your-best-rack&lt;span class="o">)&lt;/span> git push origin build-your-best-rack
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Total &lt;span class="m">0&lt;/span> &lt;span class="o">(&lt;/span>delta 0&lt;span class="o">)&lt;/span>, reused &lt;span class="m">0&lt;/span> &lt;span class="o">(&lt;/span>delta 0&lt;span class="o">)&lt;/span>, pack-reused &lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">remote:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">remote: Create a pull request &lt;span class="k">for&lt;/span> &lt;span class="s1">&amp;#39;build-your-best-rack&amp;#39;&lt;/span> on GitHub by visiting:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">remote: https://github.com/martinliu/martinliu.github.io/pull/new/build-your-best-rack
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">remote:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">To github.com:martinliu/martinliu.github.io.git
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> * &lt;span class="o">[&lt;/span>new branch&lt;span class="o">]&lt;/span> build-your-best-rack -&amp;gt; build-your-best-rack
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 第二步：用 hugo 命令创建新文章的文件，然后开始编写更新新文章&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">➜ martinliu.github.io git:&lt;span class="o">(&lt;/span>build-your-best-rack&lt;span class="o">)&lt;/span> hugo new content/post/build-your-best-rack/index.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Content &lt;span class="s2">&amp;#34;/Users/martinliu/code/martinliu.github.io/content/post/build-your-best-rack/index.md&amp;#34;&lt;/span> created
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 第三步：本地预览正常后，push 到 GitHub Pages 空间在远程预览 https://martinliu.github.io&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">➜ martinliu.github.io git:&lt;span class="o">(&lt;/span>build-your-best-rack&lt;span class="o">)&lt;/span> ✗ git add .
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">➜ martinliu.github.io git:&lt;span class="o">(&lt;/span>build-your-best-rack&lt;span class="o">)&lt;/span> ✗ git commit -m &lt;span class="s2">&amp;#34;review new post online&amp;#34;&lt;/span>&lt;span class="o">[&lt;/span>build-your-best-rack e21fffe8f&lt;span class="o">]&lt;/span> review new post online
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="m">1&lt;/span> file changed, &lt;span class="m">6&lt;/span> insertions&lt;span class="o">(&lt;/span>+&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> create mode &lt;span class="m">100644&lt;/span> content/post/build-your-best-rack/index.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">➜ martinliu.github.io git:&lt;span class="o">(&lt;/span>build-your-best-rack&lt;span class="o">)&lt;/span> git push --set-upstream origin build-your-best-rack
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Enumerating objects: 9, &lt;span class="k">done&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Counting objects: 100% &lt;span class="o">(&lt;/span>9/9&lt;span class="o">)&lt;/span>, &lt;span class="k">done&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Delta compression using up to &lt;span class="m">10&lt;/span> threads
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Compressing objects: 100% &lt;span class="o">(&lt;/span>5/5&lt;span class="o">)&lt;/span>, &lt;span class="k">done&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Writing objects: 100% &lt;span class="o">(&lt;/span>6/6&lt;span class="o">)&lt;/span>, &lt;span class="m">540&lt;/span> bytes &lt;span class="p">|&lt;/span> 540.00 KiB/s, &lt;span class="k">done&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Total &lt;span class="m">6&lt;/span> &lt;span class="o">(&lt;/span>delta 3&lt;span class="o">)&lt;/span>, reused &lt;span class="m">0&lt;/span> &lt;span class="o">(&lt;/span>delta 0&lt;span class="o">)&lt;/span>, pack-reused &lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">remote: Resolving deltas: 100% &lt;span class="o">(&lt;/span>3/3&lt;span class="o">)&lt;/span>, completed with &lt;span class="m">3&lt;/span> &lt;span class="nb">local&lt;/span> objects.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">To github.com:martinliu/martinliu.github.io.git
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 49d889b6e..e21fffe8f build-your-best-rack -&amp;gt; build-your-best-rack
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">branch &lt;span class="s1">&amp;#39;build-your-best-rack&amp;#39;&lt;/span> &lt;span class="nb">set&lt;/span> up to track &lt;span class="s1">&amp;#39;origin/build-your-best-rack&amp;#39;&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 第四步：在 GitHub 上发起并合并 pr&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 第五步：删除本地特性分支，删除远程特性分支，更新本地 master 分支。&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">➜ martinliu.github.io git:&lt;span class="o">(&lt;/span>change-to-new-theme&lt;span class="o">)&lt;/span> git checkout master
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">warning: unable to rmdir &lt;span class="s1">&amp;#39;themes/hugo-theme-stack&amp;#39;&lt;/span>: Directory not empty
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Switched to branch &lt;span class="s1">&amp;#39;master&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Your branch is behind &lt;span class="s1">&amp;#39;origin/master&amp;#39;&lt;/span> by &lt;span class="m">5&lt;/span> commits, and can be fast-forwarded.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">(&lt;/span>use &lt;span class="s2">&amp;#34;git pull&amp;#34;&lt;/span> to update your &lt;span class="nb">local&lt;/span> branch&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">➜ martinliu.github.io git:&lt;span class="o">(&lt;/span>master&lt;span class="o">)&lt;/span> ✗ git push origin --delete origin/change-to-new-theme
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">error: unable to delete &lt;span class="s1">&amp;#39;origin/change-to-new-theme&amp;#39;&lt;/span>: remote ref does not exist
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">error: failed to push some refs to &lt;span class="s1">&amp;#39;github.com:martinliu/martinliu.github.io.git&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">➜ martinliu.github.io git:&lt;span class="o">(&lt;/span>master&lt;span class="o">)&lt;/span> ✗ git push origin --delete change-to-new-theme
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">To github.com:martinliu/martinliu.github.io.git
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - &lt;span class="o">[&lt;/span>deleted&lt;span class="o">]&lt;/span> change-to-new-theme
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">➜ martinliu.github.io git:&lt;span class="o">(&lt;/span>master&lt;span class="o">)&lt;/span> ✗ git pull
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>根据这款新皮肤的提示，我查看了最新的 Hugo 的文档，为了发挥这个皮肤的图像 resize 功能，并且遵从新的编写 post 的规范。以后的所有新文章的 md 文件和图片文件都需要放到一个独立的新目录中。&lt;/p>
+&lt;p>新创建一篇 post 的时候使用这个命令：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">hugo new content/post/new-blog-test/index.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在站点的根目录下执行这条命令后，会帮你创建新的目录和 &lt;code>index.md&lt;/code> 文件；由于我的站点默认使用了中文语言，因此，如果我想写一篇英文的文章的话，我就需要将 md 文件的名字写成 &lt;code>index.en.md&lt;/code> ；这个皮肤支持双语的，如果这篇文章也有中英两个版本的话，md 文件就应该有两个：&lt;/p>
+&lt;ul>
+&lt;li>index.zh-cn.md&lt;/li>
+&lt;li>index.en.md&lt;/li>
+&lt;/ul>
+&lt;p>这样就有了中英文的两个独立的页面，而且两种语言各自的页面上，都会有一个语言切换的按钮，所以这个皮肤对于双语，或者多语言写作的人来说，应该是非常顺手的一个选择。我将主导航的那些页面都做出了双语的版本。&lt;/p>
+&lt;p>由于，我最后的所有静态文件和图片都发布到了 CloudFlare 的 Pages 服务里，而且它们还提供 CDN 服务，而这个功能在 GitHub Pages 空间中是不提供的。因此，以前我用 GitHub Pages host 这个 blog 的时候，每次编写和发布新文章的时候，还需要手工的将图片上传到其它第三方的图床空间中，然后在更新 md 文章中图片的网址，其实还是比较繁琐和麻烦的。&lt;/p>
+&lt;p>这个国庆节期间，我基本上也完成了 home lab 的 Rack 搭建项目，初步效果如下：&lt;/p>
+&lt;p>&lt;img src="https://martinliu.cn/blog/change-to-jimmy-stack-theme/new-rack.png"
+width="1500"
+height="2000"
+srcset="https://martinliu.cn/blog/change-to-jimmy-stack-theme/new-rack_huf64d265787f23399131e9545ff153024_4954162_480x0_resize_box_3.png 480w, https://martinliu.cn/blog/change-to-jimmy-stack-theme/new-rack_huf64d265787f23399131e9545ff153024_4954162_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="180px"
+>&lt;/p>
+&lt;p>以上这张图片放置在了和 md 文件相同的目录中，插入这张图片的代码就变得异常简单了 &lt;code>![](new-rack.png)&lt;/code> ；而且图片也被拉伸到了和文章页面宽度等宽，大小合适的情况下会充满页面宽度，而且能够自适应浏览器显示器的宽度。&lt;/p>
+&lt;p>后续会出一些关于这个 home lab 的文章。&lt;/p>
+&lt;p>关于这个皮肤的使用文档，请访问： &lt;a class="link" href="https://docs.stack.jimmycai.com/" target="_blank" rel="noopener"
+>https://docs.stack.jimmycai.com/&lt;/a>&lt;/p>
+&lt;p>如果你也喜欢这个风格的皮肤，请查看： &lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack-starter" target="_blank" rel="noopener"
+>hugo-theme-stack-stater&lt;/a>&lt;/p>
+&lt;p>遗留问题：&lt;/p>
+&lt;ul>
+&lt;li>左上角的头像图片无法正常显示&lt;/li>
+&lt;li>添加一种免费好用的评论互动插件&lt;/li>
+&lt;li>增加搜索功能&lt;/li>
+&lt;/ul></description></item><item><title>将笔记本上的Hugo站点分享给局域网里的其他人</title><link>https://martinliu.cn/blog/%E5%B0%86%E7%AC%94%E8%AE%B0%E6%9C%AC%E4%B8%8A%E7%9A%84hugo%E7%AB%99%E7%82%B9%E5%88%86%E4%BA%AB%E7%BB%99%E5%B1%80%E5%9F%9F%E7%BD%91%E9%87%8C%E7%9A%84%E5%85%B6%E4%BB%96%E4%BA%BA/</link><pubDate>Thu, 04 Jan 2018 07:33:32 +0800</pubDate><guid>https://martinliu.cn/blog/%E5%B0%86%E7%AC%94%E8%AE%B0%E6%9C%AC%E4%B8%8A%E7%9A%84hugo%E7%AB%99%E7%82%B9%E5%88%86%E4%BA%AB%E7%BB%99%E5%B1%80%E5%9F%9F%E7%BD%91%E9%87%8C%E7%9A%84%E5%85%B6%E4%BB%96%E4%BA%BA/</guid><description>&lt;img src="https://martinliu.cn/images/abstract-12.jpg" alt="Featured image of post 将笔记本上的Hugo站点分享给局域网里的其他人" />&lt;p>我的笔记本上有好几个 Hugo 做的静态的站点，有自己的个人 Blog，有公司产品的培训文档；其中的有些站点内容，有可能是不方便发布到 Internet 上，有可能是你的观众并没有条件访问 Internet，但是使大家同在一个局域网里是一个很现实很方便的做法。那么怎样以最小的代价实现这个需求呢？&lt;/p>
+&lt;h2 id="选择-hugo-服务器启动参数">选择 Hugo 服务器启动参数&lt;/h2>
+&lt;p>为了满足以上需求，在启动 Hugo 服务器的时候需要增加两个参数，如下所示：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">martin@bogon:source/martinliu-hugo ‹master*›$ hugo server --bind 192.168.1.107 --baseURL http://192.168.1.107/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Started building sites ...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Built site for language en:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">0 draft content
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">0 future content
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">0 expired content
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">387 regular pages created
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1100 other pages created
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">0 non-page files copied
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">668 paginator pages created
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">509 tags created
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">37 categories created
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">total in 922 ms
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Watching for changes in /Users/martin/source/martinliu-hugo/{content,static,themes}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Serving pages from memory
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Web Server is available at http://192.168.1.107:1313/ (bind address 192.168.1.107)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Press Ctrl+C to stop
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>对以上参数的解释：&lt;/p>
+&lt;ul>
+&lt;li>&amp;ndash;bind 192.168.1.107 ：这个 192 的 IP 地址是笔记本目前局域网（Wifi）的地址，其他人需要和你同在这个局域网里，或者能够访问到这个网段的地址&lt;/li>
+&lt;li>&amp;ndash;baseURL http://192.168.1.107/ ： 这会覆盖 Hugo 站点里根目录下配置文件里的 baseURL 参数，有可能配置文件中这个参数是类似于 &lt;a class="link" href="http://martinliu.cn/" target="_blank" rel="noopener"
+>http://martinliu.cn/&lt;/a> ，如果不加这个参数的话网站上的相关图片会显示不出来。&lt;/li>
+&lt;/ul>
+&lt;h2 id="配置笔记本电脑的防火墙">配置笔记本电脑的防火墙&lt;/h2>
+&lt;p>以 macOS 为例，当你启动了这个 Hugo 服务器的时候，你访问 Security &amp;amp; Privacy 配置的时候，选择 Firewall 标签的时候，会自动弹出一个对话框，询问是否允许 incoming 的网络连接到 hugo 的应用服务。点击允许即可，这样防火墙配置里就多了一条配置，如下图所示：&lt;/p>
+&lt;p>&lt;img src="http://martinliu.qiniudn.com/images/hugo-firewall-rule.jpeg"
+loading="lazy"
+alt="firewall"
+>&lt;/p>
+&lt;h2 id="总结">总结&lt;/h2>
+&lt;p>Hugo 可以很方便的将本地站点分享给局域网里的其它人，只需要在启动的时候加上适当的参数，配置好本机的防火墙策略即可。&lt;/p></description></item></channel></rss>

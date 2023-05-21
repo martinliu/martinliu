@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on Martin Liu's Blog</title><link>https://martinliu.cn/page/</link><description>Recent content in Pages on Martin Liu's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 06 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://martinliu.cn/page/index.xml" rel="self" type="application/rss+xml"/><item><title>归档</title><link>https://martinliu.cn/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://martinliu.cn/archives/</guid><description/></item><item><title>教程</title><link>https://martinliu.cn/course/</link><pubDate>Sat, 06 Feb 2021 00:00:00 +0000</pubDate><guid>https://martinliu.cn/course/</guid><description>&lt;img src="https://martinliu.cn/img/student-g0c2d46b41_640.jpg" alt="Featured image of post 教程" />&lt;h3 id="devops---免费课程">DevOps - 免费课程&lt;/h3>
+&lt;blockquote>
+&lt;p>持续开发中。&lt;/p>
+&lt;/blockquote>
+&lt;p>本课程包含虚拟化、云计算、配置管理、CI、CD 等各种实操练习实验。&lt;/p>
+&lt;ul>
+&lt;li>实验内容：
+&lt;ul>
+&lt;li>Vagrant 实验室&lt;/li>
+&lt;li>Elastic Stack 实验室&lt;/li>
+&lt;li>Chef 实验室&lt;/li>
+&lt;li>Ansible 实验室&lt;/li>
+&lt;li>Jenkins 实验室&lt;/li>
+&lt;li>Pipeline 流水线实验室&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="可观测性管理---免费课程">可观测性管理 - 免费课程&lt;/h3>
+&lt;p>基于 Elastic Stack 技术栈的可观测性实战工作坊，目标是让参与者彻底理解‘可观测性’对分布式复杂应用系统的作用，正确的使用可观测性工具集，实现对云原生应用或者传统应用的运维管理。&lt;/p>
+&lt;ul>
+&lt;li>课程详细介绍：&lt;a class="link" href="https://martinliu.cn/blog/workshop-elastic-observability/" target="_blank" rel="noopener"
+>见这篇博客文章&lt;/a>&lt;/li>
+&lt;li>课程讲师 PPT：&lt;a class="link" href="https://docs.qq.com/slide/DUGRzYVVTU3ZxblBP" target="_blank" rel="noopener"
+>在线查看&lt;/a>&lt;/li>
+&lt;li>本地环境的课件：
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://elk-workshop.github.io/codelabs/one-nodes-es-server/#0" target="_blank" rel="noopener"
+>‘Elastic Stack 单节点搭建’ 课件&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://elk-workshop.github.io/codelabs/elastic-observability-foundation/#0" target="_blank" rel="noopener"
+>‘Elastic 可观测性方案’ 课件&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>腾讯云环境录播网址：&lt;a class="link" href="https://cloud.tencent.com/developer/salon/live-1304" target="_blank" rel="noopener"
+>腾讯课堂查看&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="nutanix---免费课程">Nutanix - 免费课程&lt;/h3>
+&lt;ul>
+&lt;li>访问地址：&lt;a class="link" href="https://nutanix.martinliu.cn" target="_blank" rel="noopener"
+>点这里&lt;/a>&lt;/li>
+&lt;li>简介：本实验室包含 Nutanix CE 的基础安装，没有 Nutanix 专用服务器的朋友，可以从这一步开始。这里的所有练习步骤都是 Nutanix 软件的基础操作，在企业版软件上也同样适用。&lt;/li>
+&lt;li>实验内容：
+&lt;ol>
+&lt;li>Prism Central 部署和配置&lt;/li>
+&lt;li>Nutanix Calm 基础功能&lt;/li>
+&lt;li>Nutanix Calm 中级操作&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="sre-实践必修课收费">SRE 实践必修课（收费）&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>简介：本课程是 IT 从业人员的 SRE 必修课。适合于覆盖所有级别的相关人员。适合在企业在导入 SRE 和 DevOps 实践，并改革前行。一天或者两天内训。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>目标：&lt;/p>
+&lt;ul>
+&lt;li>在组织中对 SRE 相关的 基础、实践流程达成高度一致和认同&lt;/li>
+&lt;li>详细了解在组织中制定 SLO 的流程、实施的方式&lt;/li>
+&lt;li>彻底梳理 SRE 的知识体系和重要的技术实践实践&lt;/li>
+&lt;li>对 SRE 的实施过程和相关案例做针对性的研讨&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>课程对象&lt;/p>
+&lt;ul>
+&lt;li>所有对 SRE 感兴趣的人员&lt;/li>
+&lt;li>从 CxO 到各种类型的工程师&lt;/li>
+&lt;li>想成为 SRE/DevOps 工程师的人员&lt;/li>
+&lt;li>产品经理、项目经理、一线运维经理&lt;/li>
+&lt;li>DevOps Professional/Master 认证人员，Srcum Master 认证人员&lt;/li>
+&lt;li>敏捷教练，DevOps 教练&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>课程内容概要&lt;/p>
+&lt;ol>
+&lt;li>SRE 的由来和定义&lt;/li>
+&lt;li>SRE 的 5 大核心基础&lt;/li>
+&lt;li>SRE 的实践和流程的特性&lt;/li>
+&lt;li>经典案例分享&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;p>欲了解详情，请关注微信公众号 “MyDevOps” 联系。&lt;/p>
+&lt;h3 id="sre-foundation-认证培训收费">SRE Foundation℠ 认证培训（收费）&lt;/h3>
+&lt;p>详细课程介绍点下图。&lt;/p>
+&lt;p>&lt;a class="link" href="https://mp.weixin.qq.com/s/LqRJfXWdm0yOlEwUa3qDDg" target="_blank" rel="noopener"
+>&lt;img src="https://martinliu.cn/images/sref-zs.jpg"
+loading="lazy"
+>&lt;/a>&lt;/p>
+&lt;p>全国各个城市火热报名中，小班授课，人满就开班。&lt;/p>
+&lt;p>欲了解详情，请关注微信公众号 “MyDevOps” 联系。&lt;/p></description></item><item><title>关于</title><link>https://martinliu.cn/about/</link><pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate><guid>https://martinliu.cn/about/</guid><description>&lt;img src="https://martinliu.cn/img/about.JPG" alt="Featured image of post 关于" />&lt;h2 id="个人简介">个人简介&lt;/h2>
+&lt;p>Elastic 资深开发者布道师，中国 DevOps 社区创始人，《DevOps Handbook》和《The Site Reliability Workbook》译者；精通 DevOps/SRE/ITSM 等理论体系和相关实践等落地实现。致力于在全国范围内通过社区来推广 DevOps&amp;amp;SRE 的理念、技术和实践。&lt;/p>
+&lt;h2 id="关注我">关注我&lt;/h2>
+&lt;ul>
+&lt;li>B 站 - DevOps 教练 &lt;a class="link" href="https://space.bilibili.com/477542716" target="_blank" rel="noopener"
+>https://space.bilibili.com/477542716&lt;/a>&lt;/li>
+&lt;li>Twitter - &lt;a class="link" href="https://twitter.com/martinliu" target="_blank" rel="noopener"
+>@martinliu&lt;/a>&lt;/li>
+&lt;li>LinkedIn - &lt;a class="link" href="https://www.linkedin.com/in/liuzheng/" target="_blank" rel="noopener"
+>MartinLiu&lt;/a>&lt;/li>
+&lt;li>邮箱 - &lt;a class="link" href="mailto:liu.martin@outlook.com" >liu.martin@outlook.com&lt;/a>&lt;/li>
+&lt;li>微信公众号 - DevOps教练（MyDevOps）&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://elasticstack-1300734579.cos.ap-nanjing.myqcloud.com/2021-05-11-DevOps-qrc-mydevops.jpg"
+loading="lazy"
+alt="微信公众号 - MyDevOps"
+>&lt;/p>
+&lt;h2 id="社区布道记录">社区布道记录&lt;/h2>
+&lt;p>这里是即将发生和以前的部分社区分享。&lt;/p>
+&lt;p>&lt;em>Upcoming Events&lt;/em>&lt;/p>
+&lt;ul>
+&lt;li>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;em>Past Events&lt;/em>&lt;/p>
+&lt;h3 id="2023">2023&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.bagevent.com/event/dev-together-2022" target="_blank" rel="noopener"
+>3 月 25 日 中国开发者生态峰会 - 北京 - 2023 - &lt;strong>《社区人必备的运营之道》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.hudongba.com/party/gtxy5.html" target="_blank" rel="noopener"
+>3 月 18 日 中国 DevOps 社区峰会 - 武汉 - 2023 - &lt;strong>《用AI加速度DevOps的实现步伐》&lt;/strong>&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="2022">2022&lt;/h3>
+&lt;blockquote>
+&lt;p>倾情分享：双周线上直播活动 “DevOps 工具鉴宝” ，第一季开始于 4 月 15 日，在 B 站收看 10 集直播视频 &lt;a class="link" href="https://www.youtube.com/playlist?list=PLjF62SePsId5XwaVcmQRTn5SYtgOc61w6" target="_blank" rel="noopener"
+>DevOps 工具鉴宝 - 播放清单&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.bilibili.com/video/BV1Lv4y1X7dY/" target="_blank" rel="noopener"
+>12 月 22 日 DevOps 社区直播 “樱花峰会直通车”系列直播第1期：- &lt;strong>《剖析2022年领导们最关心的那些问题？》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.bilibili.com/video/BV1Sv4y1X77V/" target="_blank" rel="noopener"
+>12 月 8 日 Red Hat 邀请 webinar - &lt;strong>《eBPF 在在SRE中的应用》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="http://conf.elasticsearch.cn/2022/schedule.html" target="_blank" rel="noopener"
+>10 月 29 日 Elastic Dev Day China 2022 - 深圳 - &lt;strong>《面向未来的 Elastic Stack 数据摄入架构》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.bilibili.com/video/BV1ca411N7yo" target="_blank" rel="noopener"
+>8 月 11 日 Red Hat 邀请 webinar - &lt;strong>《Ansible自动化及在SRE中的实践》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.hudongba.com/party/nuul5.html" target="_blank" rel="noopener"
+>8 月 13 日 中国 DevOps 社区峰会 - 天津 - 2022 - &lt;strong>《APM分布式追踪不只是埋点》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://space.bilibili.com/370989874/channel/collectiondetail?sid=338624" target="_blank" rel="noopener"
+>4 月 15 日 ~ 9 月 2 日； - &lt;strong>《DevOps工具鉴宝》第一季，共 10 集，系列线上直播活动&lt;/strong>&lt;/a> | &lt;a class="link" href="https://github.com/DevopsChina/lab.git" target="_blank" rel="noopener"
+>GitHub 代码库&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="2021">2021&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a class="link" href="hudongba.com/party/ufpe5.html" >12 月 4 日 中国 DevOps 社区峰会 - 深圳 - 2021 - &lt;strong>《用 OpenTelemetry 透明数字化系统的可观测性》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="hudongba.com/party/0wrt5.html" >9 月 4 日 中国 DevOps 社区峰会 - 大连 - 2021 - &lt;strong>《用 OpenTelemetry 透明数字化系统的可观测性》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://cloud.tencent.com/developer/salon/live-1549" target="_blank" rel="noopener"
+>8 月 26 日 腾讯云 实战工作坊 - &lt;strong>《Elastic Security 安全管理实操》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://coscup.org/2021/zh-TW/session/XL7QML" target="_blank" rel="noopener"
+>7 月 31 日（周六-下午）COSCUP - &lt;strong>《谈谈开源的求生通道》&lt;/strong>&lt;/a> | &lt;a class="link" href="https://www.bilibili.com/video/BV1y64y1W7fu" target="_blank" rel="noopener"
+>B 站&lt;/a> | &lt;a class="link" href="https://www.youtube.com/watch?v=5Ej6vR6hIzY" target="_blank" rel="noopener"
+>YouTube&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.hudongba.com/party/gde75.html" target="_blank" rel="noopener"
+>7 月 31 日（周六-上午）阿里云 ACE×Elastic &lt;strong>可观测性工作坊/Meetup&lt;/strong> 北京同城会站&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.huodongxing.com/event/2604289049100" target="_blank" rel="noopener"
+>7 月 9 日 中国 DevOps 社区武汉第 4 届 Meetup - &lt;strong>《Elastic O11y Workshop》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.hudongba.com/party/gde75.html" target="_blank" rel="noopener"
+>6 月 26 日（周六）中国 DevOps 社区沈阳首届 Meetup - &lt;strong>《SRE 提高服务质量和稳定性的套路》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.hudongba.com/party/t9y75.html" target="_blank" rel="noopener"
+>6 月 20 日（周日）中国 DevOps 社区北京第 11 届 Meetup - &lt;strong>《懂 SRE 么？直到你理解了 SLO 的原理》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://pages.segmentfault.com/dev-eco-2021" target="_blank" rel="noopener"
+>6 月 5 日（周六）Dev Together 2021 &lt;strong>《从开源社区转身为千人级上市公司》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://martinliu.cn/blog/elastic-university-campus-intro/" target="_blank" rel="noopener"
+>5 月 19 日（周三） 天津理工大学 - &lt;strong>《探究改变了整个行业的全球开源大潮》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="http://www.owasp.org.cn/OWASP_Events/owasp4e2d56fd56db5ddd533a57df5b8951686c999f99" target="_blank" rel="noopener"
+>5 月 21 日（周五) OWASP China Conf - &lt;strong>《洞悉安全事态感知和预警平台最佳实践》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.hudongba.com/party/gwb55.html" target="_blank" rel="noopener"
+>5 月 22 日（周六）DevOps China Chengdu Meetup - &lt;strong>《Elastic Stack 可观测性工作坊》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://community.elastic.co/events/details/elastic-apj-virtual-presents-elastic-security-an-quan-guan-li-shi-zhan-gong-zuo-fang/" target="_blank" rel="noopener"
+>3 月 31 日 Elastic Community - &lt;strong>《Elastic Security 安全管理实战工作坊》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://developer.aliyun.com/topic/esanniv3rd?utm_content=g_1000231789" target="_blank" rel="noopener"
+>2 月 2 日 阿里云 Elasticsearch 生态&amp;amp;技术峰会 - &lt;strong>《如何规划和执行威胁狩猎》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://community.elastic.co/events/details/elastic-global-community-presents-community-conference-2021/" target="_blank" rel="noopener"
+>2 月 27 日 Elastic Community 2021 - &lt;strong>《如何使用 Elastic Stack 规划和执行威胁狩猎》&lt;/strong>&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="2020">2020&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.hudongba.com/party/0h2wa.html" target="_blank" rel="noopener"
+>12 月 19 日：中国 DevOps 社区峰会-北京站 — &lt;strong>《中国 DevOps 社区的现状和未来》KEYNOTES&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.hudongba.com/party/0h2wa.html" target="_blank" rel="noopener"
+>12 月 19 日：中国 DevOps 社区峰会-北京站 — &lt;strong>《SRE 提高服务的质量和稳定性的套路》Track&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.hudongba.com/party/gq2wa.html" target="_blank" rel="noopener"
+>11 月 21 日：中国 DevOps 社区峰会-成都站 — &lt;strong>《中国 DevOps 社区的现状和未来》KEYNOTES&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="http://www.phpconchina.com/" target="_blank" rel="noopener"
+>10 月 18 日：PHPCon China 2020- &lt;strong>《SRE 如何提高服务的质量和稳定性》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://cloud.tencent.com/developer/salon/live-1304" target="_blank" rel="noopener"
+>12 月 23 日：腾讯云+社区沙龙 online - &lt;strong>《Elasticsearch 应用监控管理平台搭建实战》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.hudongba.com/party/4rl9a.html" target="_blank" rel="noopener"
+>8 月 10 日：中国 DevOps 社区首届 — &lt;strong>《Pipeline Craft 流水线大赛 》Hackathon Organizer&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.hudongba.com/party/kkcza.html/" target="_blank" rel="noopener"
+>4 月 1 日：中国 DevOps 社区第 18 期线上直播— &lt;strong>《运维、开发和管理者们必备的 SRE 核心体系解读》&lt;/strong>&lt;/a> &lt;a class="link" href="https://www.bilibili.com/video/BV1ak4y1975Z" target="_blank" rel="noopener"
+>B 站&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="2019">2019&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a class="link" href="http://conf.elasticsearch.cn/2019/beijing/schedule.html" target="_blank" rel="noopener"
+>12 月 7 日：Elastic DevDay 2019 - &lt;strong>《用 Elastic Stack 破解云原生的可观测性》KEYNOTES&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.hudongba.com/party/js53a.html" target="_blank" rel="noopener"
+>10 月 26 日：中国 DevOps 社区峰会-杭州 — &lt;strong>《中国 DevOps 社区的现状和规划》KEYNOTES&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.huodongxing.com/event/2508098665800" target="_blank" rel="noopener"
+>10 月 24 日：云原生技术实践峰会 CNBPS — &lt;strong>《不只是日志，Elastic Stack 给你更多精彩》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.bagevent.com/event/5451680" target="_blank" rel="noopener"
+>10 月 20 日 ： PyCon2019 中国 Python 开发者大会- 深圳站 - &lt;strong>《 Google SRE 体系核心基础解读》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="bagevent.com/event/5293611" >9 月 11 日 ： PyCon2019 中国 Python 开发者大会- 上海站 - &lt;strong>《分层次构建应用系统的可观测性》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://coscup.org/2019/en/programs/" target="_blank" rel="noopener"
+>8 月 17 日 ： COSCUP 2019 2019 Taipei - &lt;strong>《破解云原生应用的可观测性》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="http://www.phpconchina.com/2019" target="_blank" rel="noopener"
+>8 月 11 日 ： PHPCon China 2019 Shanghai - &lt;strong>《破解云原生应用的可观测性》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="http://www.phpconchina.com/2019" target="_blank" rel="noopener"
+>8 月 4 日 ： TiD 质量竞争力大会 北京 - &lt;strong>《破解云原生应用的可观测性》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.hudongba.com/party/lwina.html" target="_blank" rel="noopener"
+>6 月 2 日 ： 中国 DevOps 社区重庆首届 Meetup - &lt;strong>《DevOps 工作三步法精讲》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.hudongba.com/party/wjz2a.html" target="_blank" rel="noopener"
+>5 月 25 日 ： 中国 DevOps 社区济南首届 Meetup - &lt;strong>《用 Jenkins 实施 CI/CD 工作坊》Workshop&lt;/strong>&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="2018">2018&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.hudongba.com/party/24epn.html" target="_blank" rel="noopener"
+>12 月 16 日：中国 DevOps 社区北京第 3 届 Meetup - &lt;strong>《中国 DevOpsDays 社区回顾》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.bagevent.com/event/1797956?bag_track=bagevent" target="_blank" rel="noopener"
+>11 月 3 日：DevOps Days Shenzhen 2018 - &lt;strong>《2018 DevOps 状态报告深度解读》KEYNOTES&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.bagevent.com/event/1797956?bag_track=bagevent" target="_blank" rel="noopener"
+>11 月 2 日：DevOps Days Shenzhen 2018 - &lt;strong>《DevOps 工作三步法》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://devopsdays.tw/2018/agenda.html" target="_blank" rel="noopener"
+>9 月 12 日：DevOps Days Taipei 2018 - &lt;strong>《沒有度量就沒有管理 &amp;ndash;洞察 DevOps 能力成長模型》&lt;/strong>&lt;/a> | &lt;a class="link" href="https://s.itho.me/devopsdays/2018/0912tracka-5.pdf" target="_blank" rel="noopener"
+>Slides&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.bagevent.com/event/1770635" target="_blank" rel="noopener"
+>9 月 9 日：中国 DevOps 社区北京第 2 届 Meetup - &lt;strong>《不应用 DevOps 能力成长模型，就不会成功！》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://msite.31huiyi.com/m/mobisite/zdyhtml/1368776152?menuId=1368776152&amp;amp;comId=365820979&amp;amp;lc=1&amp;amp;sui=0WNauKvp" target="_blank" rel="noopener"
+>8 月 18 日：DevOps Days Shanghai 2018 - &lt;strong>《2018 DevOps 状态报告中文版发布》KEYNOTES&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://msite.31huiyi.com/m/mobisite/zdyhtml/1368776152?menuId=1368776152&amp;amp;comId=365820979&amp;amp;lc=1&amp;amp;sui=0WNauKvp" target="_blank" rel="noopener"
+>8 月 17 日：DevOps Days Shanghai 2018 - &lt;strong>《Accelerate 加速度》高效 IT 组织演进图谱&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.bagevent.com/event/1627132" target="_blank" rel="noopener"
+>7 月 28 日：中国 DevOps 社区天津首届 Meetup - &lt;strong>《欢迎来到中国 DevOps 社区》KEYNOTES&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.bagevent.com/event/1602498" target="_blank" rel="noopener"
+>7 月 22 日：中国 DevOps 社区北京首届 Meetup - &lt;strong>《欢迎来到中国 DevOps 社区》KEYNOTES&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="http://event.31huiyi.com/1281765435/" target="_blank" rel="noopener"
+>5 月 5 日： DevOps Days Beijing 2018 - &lt;strong>《怎样挑战 DevOps 实践之旅？》KEYNOTES&lt;/strong>&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="2017">2017&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://devopsdays.tw/2017/sessions.html" target="_blank" rel="noopener"
+>9 月 6 日：DevOps Days Taipei 2017 - &lt;strong>《DevOps 的核心理念和實踐》&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.bagevent.com/event/devopsdays-beijing2017" target="_blank" rel="noopener"
+>3 月 18 日：DevOps Days Beijing 2017 - &lt;strong>OpenSpace Facilitator. Brought this internal community into China&lt;/strong>&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="翻译的书籍">翻译的书籍&lt;/h2>
+&lt;p>我翻译的书籍。&lt;/p>
+&lt;h3 id="devops-handbook-devops-实践指南">《DevOps Handbook》-《DevOps 实践指南》&lt;/h3>
+&lt;p>翻译书籍 &lt;a class="link" href="https://itrevolution.com/book/the-devops-handbook/" target="_blank" rel="noopener"
+>《DevOps Handbook》&lt;/a> 来自 &lt;em>IT Revolution Press&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://elasticstack-1300734579.cos.ap-nanjing.myqcloud.com/2021-05-11-025310.jpg"
+loading="lazy"
+alt="DevOps Handbook"
+>&lt;/p>
+&lt;p>已出版，网上有售。&lt;/p>
+&lt;ul>
+&lt;li>京东：&lt;a class="link" href="https://item.jd.com/26848921955.html" target="_blank" rel="noopener"
+>https://item.jd.com/26848921955.html&lt;/a>&lt;/li>
+&lt;li>英文原版-亚马逊书店：&lt;a class="link" href="http://a.co/95lK7hC" target="_blank" rel="noopener"
+>http://a.co/95lK7hC&lt;/a> &lt;em>Selling on Amazon&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;h3 id="sre-workbook---sre-工作手册">《SRE Workbook》 - 《SRE 工作手册》&lt;/h3>
+&lt;p>翻译书籍 《SRE Workbook》来自 O&amp;rsquo;Reilly Media&lt;/p>
+&lt;p>&lt;img src="https://elasticstack-1300734579.cos.ap-nanjing.myqcloud.com/2021-05-11-025343.jpg"
+loading="lazy"
+alt="SRE Workbook"
+>&lt;/p>
+&lt;p>已经出版，网上有售。&lt;/p>
+&lt;ul>
+&lt;li>京东：&lt;a class="link" href="https://item.jd.com/12983982.html" target="_blank" rel="noopener"
+>https://item.jd.com/12983982.html&lt;/a>&lt;/li>
+&lt;li>英文原版-亚马逊书店：&lt;a class="link" href="https://www.amazon.com/Site-Reliability-Workbook-Practical-Implement/dp/1492029505/" target="_blank" rel="noopener"
+>https://www.amazon.com/Site-Reliability-Workbook-Practical-Implement/dp/1492029505/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="devops-paradox---devops-悖论">《DevOps Paradox》 - 《DevOps 悖论》&lt;/h3>
+&lt;p>&lt;img src="https://elasticstack-1300734579.cos.ap-nanjing.myqcloud.com/2021-04-01-Screen%20Shot%202021-04-01%20at%208.53.23%20PM.jpg"
+loading="lazy"
+alt="DevOps Pradox"
+>&lt;/p>
+&lt;p>已经出版，网上有售。&lt;/p>
+&lt;ul>
+&lt;li>京东：&lt;a class="link" href="https://item.jd.com/13047191.html" target="_blank" rel="noopener"
+>https://item.jd.com/13047191.html&lt;/a>&lt;/li>
+&lt;li>英文原版-亚马逊书店：&lt;a class="link" href="https://www.amazon.com/DevOps-Paradox-truth-about-people-ebook/" target="_blank" rel="noopener"
+>https://www.amazon.com/DevOps-Paradox-truth-about-people-ebook/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>即将出版：&lt;/p>
+&lt;ul>
+&lt;li>97 Things Every SRE Should Know&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://learning.oreilly.com/library/cover/9781492081487/250w/"
+loading="lazy"
+alt="97 Things Every SRE Should Know"
+>&lt;/p>
+&lt;ul>
+&lt;li>Distributed Tracing in Practice&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://learning.oreilly.com/library/cover/9781492056621/250w/"
+loading="lazy"
+alt="Distributed Tracing in Practice"
+>&lt;/p></description></item><item><title>链接</title><link>https://martinliu.cn/%E9%93%BE%E6%8E%A5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://martinliu.cn/%E9%93%BE%E6%8E%A5/</guid><description>&lt;img src="https://martinliu.cn/img/cyberspace-gc5b941535_640.jpg" alt="Featured image of post 链接" /></description></item><item><title>搜索</title><link>https://martinliu.cn/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://martinliu.cn/search/</guid><description/></item></channel></rss>

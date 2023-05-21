@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Azure on Martin Liu's Blog</title><link>https://martinliu.cn/tags/azure/</link><description>Recent content in Azure on Martin Liu's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 21 May 2023 10:21:15 +0800</lastBuildDate><atom:link href="https://martinliu.cn/tags/azure/index.xml" rel="self" type="application/rss+xml"/><item><title>如何在 Azure 中使用 Red Hat 的开发者订阅</title><link>https://martinliu.cn/blog/use-rhel-dev-sub-in-azure/</link><pubDate>Sun, 21 May 2023 10:21:15 +0800</pubDate><guid>https://martinliu.cn/blog/use-rhel-dev-sub-in-azure/</guid><description>&lt;img src="https://martinliu.cn/blog/use-rhel-dev-sub-in-azure/virtual-machine.png" alt="Featured image of post 如何在 Azure 中使用 Red Hat 的开发者订阅" />&lt;p>如果你是红帽开源软件的个人开发者（用户），你可以通过“红帽开发者计划”实现访问、下载和使用红帽全系列产品的福利。&lt;/p>
+&lt;p>红帽开发者会员的好处是可以免费获得广泛的资料库，包括：&lt;/p>
+&lt;ul>
+&lt;li>所有红帽软件 （含所有产品及时的更新）&lt;/li>
+&lt;li>开发者资源 (technical articles, e-books, cheat sheets, and more)&lt;/li>
+&lt;li>Interactive tutorials on the latest technology and Red Hat products&lt;/li>
+&lt;li>Free in-person and virtual events with Developer experts&lt;/li>
+&lt;li>Free Developer Sandbox to build your apps&lt;/li>
+&lt;/ul>
+&lt;p>会员资格包括访问：&lt;/p>
+&lt;ul>
+&lt;li>Red Hat 所有和刹那品，包括 Red Hat Enterprise Linux, OpenShift 和 Ansible 等等&lt;/li>
+&lt;li>Red Hat Customer Portal 客户门户的访问权限&lt;/li>
+&lt;/ul>
+&lt;p>重要资源：&lt;/p>
+&lt;ul>
+&lt;li>开发者计划介绍：&lt;a class="link" href="https://developers.redhat.com/about" target="_blank" rel="noopener"
+>https://developers.redhat.com/about&lt;/a>&lt;/li>
+&lt;li>无费用的 Red Hat Enterprise Linux 个人开发者订阅的常见问题：&lt;a class="link" href="https://developers.redhat.com/articles/faqs-no-cost-red-hat-enterprise-linux#" target="_blank" rel="noopener"
+>https://developers.redhat.com/articles/faqs-no-cost-red-hat-enterprise-linux#&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="red-hat-提供开发者订阅">Red Hat 提供开发者订阅&lt;/h2>
+&lt;ul>
+&lt;li>Red Hat Enterprise Linux 个人开发者订阅的数量为16个RHEL操作系统实例。&lt;/li>
+&lt;li>需要在使用开发者订阅的操作系统上联网激活订阅&lt;/li>
+&lt;li>激活的账号和密码与开发者门户的账号相同。&lt;/li>
+&lt;li>在 Red Hat 客户门户网站上，你可以管理和续订开发者订阅。&lt;/li>
+&lt;/ul>
+&lt;p>下图是在客户门户网站上查看当前订阅使用状况的界面。&lt;/p>
+&lt;p>&lt;img src="https://martinliu.cn/blog/use-rhel-dev-sub-in-azure/red-hat-dev-sub.jpg"
+width="1133"
+height="829"
+srcset="https://martinliu.cn/blog/use-rhel-dev-sub-in-azure/red-hat-dev-sub_hu22f1d1f853b0ccef01f631da13cd884f_104668_480x0_resize_q75_box.jpg 480w, https://martinliu.cn/blog/use-rhel-dev-sub-in-azure/red-hat-dev-sub_hu22f1d1f853b0ccef01f631da13cd884f_104668_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt=" Red Hat 客户门户网站"
+class="gallery-image"
+data-flex-grow="136"
+data-flex-basis="328px"
+>&lt;/p>
+&lt;p>如果你所使用的公有云里有Red Hat官方支持的 RHEL 镜像，你可以将你的开发者订阅使用在公有云的虚拟机上。在Cloud Access这个页面上，可以看到我将微软的Azure账户和红帽开发者订阅做了关联。&lt;/p>
+&lt;p>这样就可以实现：有限数量的 Azure 虚拟机可以运行最新版的 RHEL 操作系统，这些操作系统的 License 计费到了 Red Hat 开发者订阅上；而开发者订阅又是有限免费的，因此实现了这些虚拟机的免费使用 RHEL 订阅。由于我在 Azure 中的长运行虚拟机并不多，因此这些虚拟机目前都是使用的 Red Hat Enterprise Linux。&lt;/p>
+&lt;p>&lt;img src="https://martinliu.cn/blog/use-rhel-dev-sub-in-azure/red-hat-dev-sub-cloud-access.jpg"
+width="1123"
+height="847"
+srcset="https://martinliu.cn/blog/use-rhel-dev-sub-in-azure/red-hat-dev-sub-cloud-access_hu6cd32d2f701013b0c0c0b19f37b602ed_117864_480x0_resize_q75_box.jpg 480w, https://martinliu.cn/blog/use-rhel-dev-sub-in-azure/red-hat-dev-sub-cloud-access_hu6cd32d2f701013b0c0c0b19f37b602ed_117864_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Red Hat 客户门户中的 Cloud Access 管理"
+class="gallery-image"
+data-flex-grow="132"
+data-flex-basis="318px"
+>&lt;/p>
+&lt;h2 id="azure-支持-ahb-的混合权益">Azure 支持 AHB 的混合权益&lt;/h2>
+&lt;p>参考这篇 Azure 的官方文档&lt;a class="link" href="https://learn.microsoft.com/zh-cn/azure/virtual-machines/linux/azure-hybrid-benefit-linux?tabs=rhelpayg%2Crhelbyos%2CrhelEnablebyos%2Crhelcompliance" target="_blank" rel="noopener"
+>《Red Hat Enterprise Linux (RHEL) 和 SUSE Linux Enterprise Server (SLES) 虚拟机的Azure 混合权益》&lt;/a>&lt;/p>
+&lt;p>Azure 提供的 AHB（Azure Hybrid Benefit）使用中携带你自己的订阅到公有云里使用的方式。如下图所示。&lt;/p>
+&lt;p>&lt;img src="https://martinliu.cn/blog/use-rhel-dev-sub-in-azure/azure-hybrid-benefit-compare.png"
+width="1228"
+height="761"
+srcset="https://martinliu.cn/blog/use-rhel-dev-sub-in-azure/azure-hybrid-benefit-compare_huffbb9cddff8d3a6c27d9db5cdfdff72e_49263_480x0_resize_box_3.png 480w, https://martinliu.cn/blog/use-rhel-dev-sub-in-azure/azure-hybrid-benefit-compare_huffbb9cddff8d3a6c27d9db5cdfdff72e_49263_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="即用即付”(PAYG) 和“自带订阅”(BYOS)"
+class="gallery-image"
+data-flex-grow="161"
+data-flex-basis="387px"
+>&lt;/p>
+&lt;p>右侧的这个框的说明了 Azure 虚拟机的成本结构。除了计算资源这部分需要计费意外。如果你在 Azure 中开启了 RHEL 虚拟机实例，默认情况下 RHEL 的许可证费用是有 Azure 代收的，Azure 的账单里包含了这部分。&lt;/p>
+&lt;p>对于我在 Azrue 中的长运行虚拟机来说，经过我的配置之后，Azure 的账号和 RedHat 开发者订阅关联在了一起。所以这些 RHEL 虚拟机实例上的 RHEL 许可证费用就是在 RedHat 客户门户账号（来自于红帽开发者计划福利）中计费，最多支持 16 个虚拟机的免费使用。&lt;/p>
+&lt;h2 id="如何在-azure-中配置个人公司的-rhel-订阅">如何在 Azure 中配置个人（公司）的 RHEL 订阅&lt;/h2>
+&lt;p>如下图所示，在创建 Azure 的虚拟机的时候，选择 Red Hat Enterprise Linux 模板。&lt;/p>
+&lt;p>&lt;img src="https://martinliu.cn/blog/use-rhel-dev-sub-in-azure/azure-rhel-sub.jpg"
+width="926"
+height="1326"
+srcset="https://martinliu.cn/blog/use-rhel-dev-sub-in-azure/azure-rhel-sub_hu3db0849532df8bc50a0e5fb478dcbedf_183313_480x0_resize_q75_box.jpg 480w, https://martinliu.cn/blog/use-rhel-dev-sub-in-azure/azure-rhel-sub_hu3db0849532df8bc50a0e5fb478dcbedf_183313_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="配置 RHEL 订阅授权"
+class="gallery-image"
+data-flex-grow="69"
+data-flex-basis="167px"
+>&lt;/p>
+&lt;p>在授权这个部分，点击第二个“了解更多信息”链接。这时候，浏览器会跳转到红帽客户门户中，在输入了用户名和密码登录了以后，你就完成了红帽开发者订阅和当前 Azure 账户的关联。&lt;/p>
+&lt;p>在虚拟机创建完成以后，你可以用 RHEL 的订阅管理命令将当前的 RHEL Linux 操作系统注册到红帽客户门户的订阅上。参考命令如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">subscription-manager register --org=1234567 --activationkey=DevOps
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>&amp;mdash;org ：是你在红帽门户中的组织 ID。&lt;/li>
+&lt;li>&amp;ndash;activationkey ： 是自己定义的激活秘钥；一个组织可以定义多个激活秘钥，用户部门和用途的区分。&lt;/li>
+&lt;/ul>
+&lt;p>这条命令中虽然 ID 是不适合明文暴露的；但是，这样避免了将红帽客户门户账户的用户名和密码都以明文的形式写入配置文件，或者在命令中出现：&lt;code>subscription-manager register --username &amp;lt;username&amp;gt; --password &amp;lt;password&amp;gt; --auto-attach&lt;/code>&lt;/p>
+&lt;p>在当前操作系统注册成功以后，你可以在&lt;code>/etc/yum.repos.d&lt;/code>下能找到一个&lt;code>redhat.repo&lt;/code>文件。这个文件里包含了当前操作系统所有能使用的红帽产品的订阅。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">[root@mysql yum.repos.d]# dnf repolist
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Updating Subscription Management repositories.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">repo id repo name
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">packages-microsoft-com-prod packages-microsoft-com-prod
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rhel-8-for-x86_64-appstream-rpms Red Hat Enterprise Linux 8 for x86_64 - AppStream (RPMs)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rhel-8-for-x86_64-baseos-rpms Red Hat Enterprise Linux 8 for x86_64 - BaseOS (RPMs)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>参考这篇文章《&lt;a class="link" href="https://access.redhat.com/solutions/253273%e3%80%8b" target="_blank" rel="noopener"
+>https://access.redhat.com/solutions/253273》&lt;/a>》；就可以启用或者禁用所需要的产品。&lt;/p>
+&lt;h2 id="在其他环境中的使用">在其他环境中的使用&lt;/h2>
+&lt;p>红帽开发者订阅可以让你在客户门户中下载 RHEL 安装 DVD。可以用 DVD 在私有云或者个人电脑（Home Lab）中安装 RHEL 操作系统。&lt;/p>
+&lt;p>使用上面相同的方法，既可以实现 RHEL Linux 操作系统的注册，然后完全合理合法的使用全套红帽产品线。&lt;/p>
+&lt;p>红帽开发者订阅的有效期是一年；在到期之后，在还需要在客户门户中免费续签。如果当前的开发者订阅过期了，所有 RHEL 操作系统实例就都不能正常更新和安装新的软件包了。在网站上完成了开发者订阅的免费续签之后，所有系统就可以恢复正常使用，无需做其他任何操作。&lt;/p>
+&lt;p>开发者订阅的数量是 16 个，更具我最近一年的使用体验看来，这个数量是足够用的。假如你的虚拟机模板激活了订阅，根据这个虚拟机克隆出来的虚拟机是不需要使用注册命令就可以正常更新和安装软件包的。如果订阅数量真的被用完了，可以暂时从红帽客户门户中暂时删除几个不常用的系统，这样就释放出来几个可用的 RHEL 订阅。&lt;/p>
+&lt;h2 id="排错">排错&lt;/h2>
+&lt;p>新创建的 RHEL 8 的虚拟机，在激活红帽 RHEL 订阅之后，在更新系统软件安装包的时候，报 SSL 证书过期错误，可以参考下面的命令进行解决。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">yum --disablerepo=&amp;#39;*&amp;#39; remove &amp;#39;rhui-azure-rhel8&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel8.config
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yum --config=rhui-microsoft-azure-rhel8.config install rhui-azure-rhel8
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yum update ca-certificates
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yum clean all
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>
